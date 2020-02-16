@@ -1,32 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="theme-green">
+    <Header />
+    <Leftsidebar />
+    <Content />
   </div>
 </template>
 
+<script>
+import '@/assets/js/admin.js'
+import '@/assets/js/demo.js'
+
+import Header from "@/components/template/Header"
+import Leftsidebar from "@/components/template/Leftsidebar"
+import Content from "@/components/template/Content"
+
+export default {
+    name: 'App',
+    components: { Content, Header, Leftsidebar}
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
